@@ -1,0 +1,59 @@
+{
+  "name": "flowe",
+  "author": "Arth",
+  "version": "1.0.0",
+  "description": "flowe simplifies the process of organizing and managing flow sequences. Its powerful and intuitive package makes performance optimization seamless and accessible.",
+  "types": "./types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "files": [
+    "/dist",
+    "/types"
+  ],
+  "scripts": {
+    "test": "tsup & node ./test/index.js",
+    "prettier": "prettier --write . & prettier --check .",
+    "build": "rm -rf dist & tsup & prettier --write . &  prettier --check . & eslint ./ --fix --format=pretty",
+    "prepublishOnly": "npm run build & npm run prettier"
+  },
+  "keywords": [
+    "flow",
+    "sequencing",
+    "looping",
+    "efficiency",
+    "optimization",
+    "organization",
+    "streamlining",
+    "lightweight",
+    "user-friendly",
+    "iteration",
+    "manipulation",
+    "management",
+    "control",
+    "performance",
+    "array"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4i8/flowe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4i8/flowe/issues"
+  },
+  "homepage": "https://github.com/4i8/flowe#readme",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^18.16.14",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "prettier": "^2.8.4",
+    "tsup": "^6.6.3"
+  }
+}
