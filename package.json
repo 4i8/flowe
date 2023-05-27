@@ -1,7 +1,7 @@
 {
   "name": "flowe",
   "author": "Arth",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "flowe simplifies the process of organizing and managing flow sequences. Its powerful and intuitive package makes performance optimization seamless and accessible.",
   "types": "./types/index.d.ts",
   "main": "./dist/index.js",
@@ -15,13 +15,13 @@
   },
   "files": [
     "/dist",
-    "/types"
+    "/types",
+    "/README.md"
   ],
   "scripts": {
-    "test": "tsup & node ./test/index.js",
-    "prettier": "prettier --write . & prettier --check .",
-    "build": "rm -rf dist & tsup & prettier --write . &  prettier --check . & eslint ./ --fix --format=pretty",
-    "prepublishOnly": "npm run build & npm run prettier"
+    "test": "tsup && node ./test/index.js",
+    "prettier": "prettier --write . && prettier --check .",
+    "build": "rm -rf dist && tsup && prettier --write . &&  prettier --check . && eslint ./ --fix --format=pretty"
   },
   "keywords": [
     "flow",
